@@ -16,14 +16,14 @@ public class MyQuck {
         int mid = sort(a, begin, end);
 
         // 左边递归
-        sort(a, begin, mid);
+        quick(a, begin, mid);
         // 右边递归
-        sort(a, mid + 1, end);
+        quick(a, mid + 1, end);
 
         return a;
     }
 
-    public int sort(int a[], int begin, int end) {
+    public int sort(int [] a, int begin, int end) {
 
         int cur = a[begin];
         end--;
@@ -51,11 +51,10 @@ public class MyQuck {
                     break;
                 }
             }
-
-
         }
         a[begin] = cur;
 
         return begin;
     }
+
 }
